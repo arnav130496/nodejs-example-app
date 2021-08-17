@@ -21,3 +21,8 @@ So far we have pulled the node project from git, run npm install and download th
 Now we have managed to pull our node project from github, build and deploy it in a docker container, push the docker image to our docker-hub account. All of this has been completed through jenkins build steps.
 
 Now we can pull the image from docker-hub on any machine and run the image (it will create a new container). 
+
+## Using Jenkins DSL
+
+1. Add Jobs DSL plugin from the jenkins console. Install and restart.
+2. Create a new free style project. Add the project you want to build by providing the git url. Add the job dsl groovy script to your project and specify the location in the jenkins console. 
