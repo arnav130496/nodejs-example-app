@@ -12,5 +12,11 @@ So far we have pulled the node project from git, run npm install and download th
 
 6. Now first we must add the Docker Plugin to Jenkins (Manage plugins> Select CloudBees Docker Build and Publish plugin) Download and install
 
-    NOTE: If jenkins is running in docker, then jenkins must be configured to use docker. A dockergroup must be created and jenkins must be given access to the group
-7. 
+    NOTE: If jenkins is running in docker, then jenkins must be configured to use docker. A dockergroup must be created and jenkins must be given access to the group. Additional configurations are to be done to configure this jenkins docker to access and use the docker socket. To verify we can go inside our jenkins container and run docker commands.
+    
+    NOTE: If we were running jenkins outside docker, just installing docker inside our jenkins could have done the same.
+7. Now we go back to the jenkins console, add a new build step. "Docker Build and Push". To do this we have to go to hub.docker.com and create an account, add the credentials of the docker account to the jenkins build step. Create a repository on docker-hub and add the repository and account credentials inside the build step. 
+
+Now we have managed to pull our node project from github, build and deploy it in a docker container, push the docker image to our docker-hub account. All of this has been completed through jenkins build steps.
+
+Now we can pull the image from docker-hub on any machine and run the image (it will create a new container). 
