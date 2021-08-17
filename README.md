@@ -1,5 +1,6 @@
 # Node JS App Deployment Using Jenkins
 
+## Depolyment using Jenkins UI Tool (freestyle project)
 This readme contains the stepwise instruction to build and deploy a node js app using jenkins, git, docker
 
 1. Install dependency plugins on the Jenkins Machine (Manage Plugins> Add NodeJS> Download and install)
